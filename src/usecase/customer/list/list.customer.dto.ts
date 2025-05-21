@@ -1,4 +1,4 @@
-export interface InputListCustomerDTO {}
+export interface InputListCustomerDto {}
 
 type Customer = {
     id: string;
@@ -11,6 +11,6 @@ type Customer = {
     };
 };
 
-export interface OutputListCustomerDTO {
+export interface OutputListCustomerDto {
     customers: Customer[];
 }

@@ -7,7 +7,7 @@ const customer = CustomerFactory.createWithAddress(
     new Address("123 Main St",123,"zip","City")
 );
 
-const imput = {
+const input = {
     id: customer.id,
     name: "John Doe",
     address: {
@@ -31,7 +31,7 @@ describe("Unit test for customer update use case", () => {
     it("should update a customer", async () => {
         const customerRepository = mockRepository();
         const useCase = new UpdateCustomerUseCase(customerRepository);
-        const output = await useCase.execute(imput);
-        expect(output).toEqual(imput);
+        const output = await useCase.execute(input);
+        expect(output).toEqual(input);
     });
 })
