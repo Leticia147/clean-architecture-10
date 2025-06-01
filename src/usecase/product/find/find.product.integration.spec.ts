@@ -1,5 +1,5 @@
  import { Sequelize } from "sequelize-typescript";
-import ProductModel from "../../../infrastructure/db/sequelize/model/product.model";
+import ProductModel from "../../../infrastructure/product/repository/sequelize/product.model";
 import ProductRepository from "../../../infrastructure/product/repository/sequelize/product.repository";
 import FindProductUseCase from "./find.customer.usecase";
 import Product from "../../../domain/product/entity/product";
