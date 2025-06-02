@@ -39,7 +39,7 @@ describe("Update customer use case", () => {
         custumer2.changeAddress(address2);
         await customerRepository.update(custumer2);
 
-        const output = 
+        const input = 
         {
             id: "123",
             name: "Customer 2",
@@ -50,7 +50,7 @@ describe("Update customer use case", () => {
                 zip: "Zipcode 2"
             },
         };
-        const result = await useCase.execute(output);
-        expect(result).toEqual(output);    
+        const result = await useCase.execute(input);
+        expect(result).toEqual(input);    
     });
 });
