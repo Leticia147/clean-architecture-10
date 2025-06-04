@@ -24,7 +24,6 @@ describe("Unit test for product list use case", () => {
     it("should list a product", async () => {
         const productRepository = mockRepository();
         const useCase = new ListProductUseCase(productRepository);
-
         const output = await useCase.execute({});
 
         expect(output.products.length).toBe(2);

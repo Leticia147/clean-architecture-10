@@ -23,7 +23,6 @@ describe("Unit Test find product use case", () => {
         const productRepository = mockRepository();
         productRepository.find.mockReturnValue(Promise.resolve(product));
         const useCase = new UpdateProductUseCase(productRepository);
-
         const output = await useCase.execute(input);
         expect(output).toEqual(input);
     }
