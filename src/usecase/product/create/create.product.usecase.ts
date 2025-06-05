@@ -9,7 +9,7 @@ export default class CreateProductUseCase {
     }
     async execute(input: InputCreateProductDto): Promise<OutputCreateProductDto> {
         const product = new Product(
-            input.type,
+            input.id,
             input.name,
             input.price,
         );
