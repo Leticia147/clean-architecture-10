@@ -1,5 +1,5 @@
 import Product from "../../../domain/product/entity/product"
-import FindProductUseCase from "./find.customer.usecase";
+import FindProductUseCase from "./find.product.usecase";
 
 const product = new Product("123", "Product 1", 100);
 
@@ -17,7 +17,6 @@ describe("Unit Test find product use case", () => {
         const productRepository = mockRepository();
         productRepository.find.mockReturnValue(Promise.resolve(product));
         const useCase = new FindProductUseCase(productRepository);
-
         const input = {
             id: "123"
         }
@@ -27,7 +26,6 @@ describe("Unit Test find product use case", () => {
             price: 100
         }
         const result = await useCase.execute(input);
-
         expect(result).toEqual(output);
     });
 
@@ -40,7 +38,6 @@ describe("Unit Test find product use case", () => {
         const input = {
             id: "123"
         }
-
         expect(()=>{
             return useCase.execute(input);
         }).rejects.toThrow("Product not found");
