@@ -26,7 +26,7 @@ describe('Product unit tests', () => {
         expect(product.name).toBe('Product 2');
     });
 
-    it('should chage price', () => {    
+    it('should change price', () => {    
         const product = new Product('1', 'Product 1', 10);
         product.changePrice(20);
         expect(product.price).toBe(20);
