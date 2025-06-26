@@ -147,7 +147,7 @@ describe("customer repository teste", () => {
         const customerRepository = new CustomerRepository();
         expect(async () => {
             await customerRepository.find("12fdg3");
-        }).rejects.toThrowError("Customer not found");
+        }).rejects.toThrow("Customer not found");
     });
 
     it("Deve buscar todos os produtos", async () => {     

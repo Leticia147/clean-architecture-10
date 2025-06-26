@@ -7,7 +7,7 @@ describe('Customer unit tests', () => {
         
         expect(() => {
             let customer = new Customer('', 'Doe');
-        }).toThrowError('customer: Id is required'); 
+        }).toThrow('customer: Id is required'); 
 
     });
 
@@ -15,14 +15,14 @@ describe('Customer unit tests', () => {
         
         expect(() => {
             let customer = new Customer("123", "");
-        }).toThrowError('customer: Name is required'); 
+        }).toThrow('customer: Name is required'); 
 
     });
 
     it('should throw error name and id are empty', () => {
         expect(() => {
             let customer = new Customer('', '');
-        }).toThrowError('customer: Id is required,customer: Name is required');
+        }).toThrow('customer: Id is required,customer: Name is required');
     });
 
     it('should change name', () => {
@@ -50,7 +50,7 @@ describe('Customer unit tests', () => {
         expect(() => {
             const customer = new Customer('1', 'customer 1');
             customer.activate();
-        }).toThrowError('Address is required');
+        }).toThrow('Address is required');
 
     });
 
