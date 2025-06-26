@@ -21,6 +21,6 @@ describe("Product factory unit tests", () => {
     it("should throw an error when product type is invalid", () => {
         expect(() => {
             ProductFactory.create("c", "Product c", 10);
-        }).toThrowError("Invalid product type");
+        }).toThrow("Invalid product type");
     });
 });

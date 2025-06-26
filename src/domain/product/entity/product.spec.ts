@@ -2,22 +2,23 @@ import Product from "./product";
 
 describe('Product unit tests', () => {
 
-    it('should throw error when id is empty', () => {
-        expect(() => {
-            const product = new Product('', 'Product 1', 10);
-        }).toThrowError('Id is required'); 
-    });
 
     it('should throw error when name is empty', () => {
         expect(() => {
-            const product = new Product('1', '', 10);
-        }).toThrowError('Name is required'); 
+            let product = new Product('1', '', 10);
+        }).toThrow('product: Name is required'); 
+    });
+
+    it('should throw error when id is empty', () => {
+        expect(() => {
+            let product = new Product('', 'Product 1', 10);
+        }).toThrow('product: Id is required'); 
     });
 
     it('should throw error when price is less than 0', () => {
         expect(() => {
-            const product = new Product('1', 'Product 1', -10);
-        }).toThrowError('Price must be greater than 0'); 
+            let product = new Product('1', 'Product 1', -10);
+        }).toThrow('product: Price must be greater than 0'); 
     });
 
     it('should change name', () => {    
@@ -32,4 +33,9 @@ describe('Product unit tests', () => {
         expect(product.price).toBe(20);
     });
 
+    it('should throw error when id and name are empties', () => {
+        expect(() => {
+            let product = new Product('', '', 10);
+        }).toThrow('product: Id is required,product: Name is required'); 
+    });
 });

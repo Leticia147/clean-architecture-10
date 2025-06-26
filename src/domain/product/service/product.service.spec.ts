@@ -10,8 +10,6 @@ describe("Product service unit test", () => {
         ProductService.increasePrice(products, 100);
 
         expect(product1.price).toBe(20);
-        expect(product2.price).toBe(40);
-        
+        expect(product2.price).toBe(40);    
     });
-
 });
