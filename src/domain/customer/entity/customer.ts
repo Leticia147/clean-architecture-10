@@ -4,7 +4,7 @@ import NotificationError from "../../@shared/notification/notification.error";
 
 export default class Customer extends Entity {
     private _name: string;
-    private _address!: Address;
+    private _address!: Address; 
     private _active: boolean = false
     private _rewardPoints: number = 0;
 
